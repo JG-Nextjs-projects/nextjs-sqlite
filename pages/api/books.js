@@ -8,7 +8,7 @@ export default async function handler(req, res) {
     filename: './data/books.db',
     driver: sqlite3.Database
   })
-  const data = await response.all('select * from books')
+  const data = await response.all('SELECT * FROM books')
 
   res.status(200).json(data)
 }
