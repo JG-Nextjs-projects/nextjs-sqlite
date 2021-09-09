@@ -12,7 +12,7 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     // Create a new record
     const statement = await db.prepare(
-      'INSERT INTO books title = ?, author = ?'
+      'INSERT INTO books (title, author) VALUES (?,?)'
     )
     const result = await statement.run(
       req.body.title,
