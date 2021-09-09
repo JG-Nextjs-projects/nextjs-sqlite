@@ -15,6 +15,7 @@ const bookForm = () => {
     })
   
     const result = await res.json()
+    e.target.reset()
   }
 
   return (
